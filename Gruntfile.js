@@ -43,7 +43,7 @@ module.exports = function(grunt) {
                 constants: {
                     ENV: {
                         name: 'development',
-                        apiEndpoint: 'http://localhost:9000/'
+                        apiEndpoint: 'http://nepco.herokuapp.com/'
                     }
                 }
             },

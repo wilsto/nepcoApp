@@ -34,12 +34,31 @@ angular.module('starter.controllers', [])
     };
 })
 
-.controller('PlaylistsCtrl', function($scope, $rootScope, $http, ENV) {
-    console.log('ENV', ENV);
-    $http.get(ENV.apiEndpoint + 'api/articles').success(function(articles) {
-        $scope.articles = articles;
-        console.log('articles', articles);
-    });
+.controller('PlaylistsCtrl', function($scope, $rootScope, $http, ENV, $cordovaBarcodeScanner) {
+    $scope.doRefresh = function() {
+        console.log('ENV', ENV);
+        $http.get(ENV.apiEndpoint + 'api/articles')
+            .success(function(articles) {
+                $scope.articles = articles;
+                console.log('articles', articles);
+            })
+            .finally(function() {
+                // Stop the ion-refresher from spinning
+                $scope.$broadcast('scroll.refreshComplete');
+            });
+    };
+    $scope.doRefresh();
+
+    $scope.scanBarcode = function() {
+        $cordovaBarcodeScanner.scan().then(function(imageData) {
+            alert(imageData.text);
+            console.log("Barcode Format -> " + imageData.format);
+            console.log("Cancelled -> " + imageData.cancelled);
+        }, function(error) {
+            console.log("An error happened -> " + error);
+        });
+    };
+
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {});

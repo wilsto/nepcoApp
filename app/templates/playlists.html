@@ -1,8 +1,17 @@
-<ion-view view-title="Playlists">
+<ion-view view-title="Articles">
   <ion-content>
     <ion-list>
-      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
-        {{playlist.title}}
+      <ion-item class="item item-thumbnail-left" ng-repeat="item in articles" href="#/app/playlists/{{playlist.id}}">
+          <img ng-src="{{ item.photoLink }}">
+          <h2>{{ item.brand | uppercase}}</h2>
+          <h4>{{ item.name }}</h4>
+          <div class="icons-work" style="margin:5px">
+            <span class="fa fagold" ng-class="{'fa-star':article.perf>=1,'fa-star-o':article.perf<1}"></span>
+            <span class="fa fagold" ng-class="{'fa-star':article.perf>=2,'fa-star-o':article.perf<2}"></span>
+            <span class="fa fagold" ng-class="{'fa-star':article.perf>=3,'fa-star-o':article.perf<3}"></span>
+            <span class="fa fagold" ng-class="{'fa-star':article.perf>=4,'fa-star-o':article.perf<4}"></span>
+            <span class="fa fagold" ng-class="{'fa-star':article.perf>=5,'fa-star-o':article.perf<5}"></span> &nbsp;&nbsp;<span class="fagold" style="font-style:bold">{{article.perf}}</span>
+        </div>
       </ion-item>
     </ion-list>
   </ion-content>

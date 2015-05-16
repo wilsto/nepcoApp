@@ -34,31 +34,12 @@ angular.module('starter.controllers', [])
     };
 })
 
-.controller('PlaylistsCtrl', function($scope, $rootScope, $http) {
-
-    $http.get($rootScope.rootPath + '/api/articles').success(function(articles) {
-        $scope.allarticles = articles;
+.controller('PlaylistsCtrl', function($scope, $rootScope, $http, ENV) {
+    console.log('ENV', ENV);
+    $http.get(ENV.apiEndpoint + 'api/articles').success(function(articles) {
+        $scope.articles = articles;
+        console.log('articles', articles);
     });
-
-    $scope.playlists = [{
-        title: 'Reggae',
-        id: 1
-    }, {
-        title: 'Chill',
-        id: 2
-    }, {
-        title: 'Dubstep',
-        id: 3
-    }, {
-        title: 'Indie',
-        id: 4
-    }, {
-        title: 'Rap',
-        id: 5
-    }, {
-        title: 'Cowbell',
-        id: 6
-    }];
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {});

@@ -5,9 +5,19 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'config', 'ngCordova'])
+angular.module('starter', [
+    'ionic',
+    'starter.controllers',
+    'config',
+    'ngCordova',
+    'highcharts-ng',
+    'cloudinary'
+])
 
 .run(function($ionicPlatform) {
+
+    $.cloudinary.config().cloud_name = 'imguploadstorage';
+    $.cloudinary.config().upload_preset = 'kippme';
     $ionicPlatform.ready(function() {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)

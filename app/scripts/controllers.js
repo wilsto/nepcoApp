@@ -53,7 +53,7 @@ angular.module('starter.controllers', [])
             console.log(imageData.text);
             console.log('Barcode Format -> ' + imageData.format);
             console.log('Cancelled -> ' + imageData.cancelled);
-            $location.path('#/app/playlists/' + imageData.text);
+            $location.path('app/playlists/' + imageData.text);
         }, function(error) {
             console.log('An error happened -> ' + error);
         });
@@ -67,7 +67,7 @@ angular.module('starter.controllers', [])
             console.log(imageData.text);
             console.log('Barcode Format -> ' + imageData.format);
             console.log('Cancelled -> ' + imageData.cancelled);
-            $location.path('#/app/playlists/' + imageData.text);
+            $location.path('app/playlists/' + imageData.text);
         }, function(error) {
             console.log('An error happened -> ' + error);
         });

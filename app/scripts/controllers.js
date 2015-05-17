@@ -52,13 +52,26 @@ angular.module('starter.controllers', [])
     $scope.scanBarcode = function() {
         $cordovaBarcodeScanner.scan().then(function(imageData) {
             alert(imageData.text);
-            console.log("Barcode Format -> " + imageData.format);
-            console.log("Cancelled -> " + imageData.cancelled);
+            console.log('Barcode Format -> ' + imageData.format);
+            console.log('Cancelled -> ' + imageData.cancelled);
         }, function(error) {
-            console.log("An error happened -> " + error);
+            console.log('An error happened -> ' + error);
         });
     };
 
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {});
+.controller('BrowseCtrl', function($scope, $cordovaBarcodeScanner) {
+    $scope.scanBarcode = function() {
+        $cordovaBarcodeScanner.scan().then(function(imageData) {
+            $scope.text = imageData.text;
+            console.log('Barcode Format -> ' + imageData.format);
+            console.log('Cancelled -> ' + imageData.cancelled);
+        }, function(error) {
+            console.log('An error happened -> ' + error);
+        });
+    };
+})
+    .controller('PlaylistCtrl', function($scope, $stateParams) {
+        $scope.test = $stateParams;
+    });

@@ -1,0 +1,25 @@
+<ion-view view-title="Articles">
+  <ion-content>
+    <ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="doRefresh()">
+  </ion-refresher>
+    <ion-list>
+      <ion-item class="item item-thumbnail-left" ng-repeat="item in articles" href="#/app/playlists/{{item.EAN13}}">
+          <img ng-src="{{ item.photoLink }}">
+          <h2>{{ item.brand | uppercase}}</h2>
+          <h4>{{ item.name }}</h4>
+          <div class="dark" style="margin:5px">
+            <span class="icon ion-android-star fagold" ng-class="{'fa-star':article.perf>=1,'fa-star-o':article.perf<1}"></span>
+            <span class="icon ion-android-star fagold" ng-class="{'fa-star':article.perf>=2,'fa-star-o':article.perf<2}"></span>
+            <span class="icon ion-android-star fagold" ng-class="{'fa-star':article.perf>=3,'fa-star-o':article.perf<3}"></span>
+            <span class="icon ion-android-star fagold" ng-class="{'fa-star':article.perf>=4,'fa-star-o':article.perf<4}"></span>
+            <span class="icon ion-android-star fagold" ng-class="{'fa-star':article.perf>=5,'fa-star-o':article.perf<5}"></span> &nbsp;&nbsp;<span class="fagold" style="font-style:bold">{{article.perf}}</span>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+<div class="bar bar-footer bar-stable">
+  <button class="button button-assertive" style="width:100%" ng-click="scanBarcode()"> <i class="icon ion-camera icon-lg"></i> Scanner un article</button>
+</div>
+</ion-view>

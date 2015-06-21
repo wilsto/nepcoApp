@@ -33,6 +33,11 @@ angular.module('starter.controllers', [])
         }, 1000);
     };
 })
+    .controller('IntroCtrl', function($scope, $rootScope, $http, ENV, $cordovaBarcodeScanner, $location) {
+
+
+
+    })
 
 .controller('PlaylistsCtrl', function($scope, $rootScope, $http, ENV, $cordovaBarcodeScanner, $location) {
     $scope.doRefresh = function() {

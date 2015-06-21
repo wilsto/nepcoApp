@@ -59,6 +59,16 @@ angular.module('starter', [
             }
         }
     })
+
+    .state('app.intro', {
+        url: '/intro',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/intro.html',
+                controller: 'IntroCtrl'
+            }
+        }
+    })
         .state('app.playlists', {
             url: '/playlists',
             views: {

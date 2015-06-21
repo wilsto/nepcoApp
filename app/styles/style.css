@@ -5,6 +5,11 @@
 	text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.75);
 }
 
+.fagold-outline{
+    color : #A5A293;
+    font-size: 25px;
+}
+
 .icon-lg{
     font-size: 25px;
 	text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.75);
@@ -14,4 +19,8 @@
 .orange {
 	background:#ce8c14;
 	color:white;
+}
+
+.item-carousel{
+	padding:0;
 }

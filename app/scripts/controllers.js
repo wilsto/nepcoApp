@@ -33,11 +33,20 @@ angular.module('starter.controllers', [])
         }, 1000);
     };
 })
-    .controller('IntroCtrl', function($scope, $rootScope, $http, ENV, $cordovaBarcodeScanner, $location) {
 
+.controller('IntroCtrl', function($scope, $rootScope, $http, ENV, $cordovaBarcodeScanner, $location) {
 
-
-    })
+    $scope.scanBarcode = function() {
+        $cordovaBarcodeScanner.scan().then(function(imageData) {
+            console.log(imageData.text);
+            console.log('Barcode Format -> ' + imageData.format);
+            console.log('Cancelled -> ' + imageData.cancelled);
+            $location.path('app/playlists/' + imageData.text);
+        }, function(error) {
+            console.log('An error happened -> ' + error);
+        });
+    };
+})
 
 .controller('PlaylistsCtrl', function($scope, $rootScope, $http, ENV, $cordovaBarcodeScanner, $location) {
     $scope.doRefresh = function() {

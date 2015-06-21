@@ -1,65 +1,58 @@
 <ion-view view-title="Article">
   <ion-content>
 
-<div class="row">
-    <div class="col-md-offset-1 col-md-10 ">
-        <h2 id="description" style="padding:0">{{article.brand | uppercase}} </h2>
-        <div class="icons-work pull-right" style="top:25px">
-            <span class="icon ion-android-star fagold"></span>
-            <span class="icon ion-android-star fagold"></span>
-            <span class="icon ion-android-star fagold"></span>
-            <span class="icon ion-android-star fagold"></span>
-            <span class="icon ion-android-star-outline fagold"></span>
-        </div>
-
-        <h3 style="padding:0;">{{article.name}} -  
-        <span class="text-muted" style="line-height: 20px;font-size:19px"> {{article.price}}€</span> </h3>
-        <span style="line-height: 20px">EAN : {{article.EAN13 }} - Ref :{{article.seller }}</span>
-        <hr>
-        <div class="row responsive-sm">
-            <div class="col-md-4 col-xs-12 col-sm-12">
-
-                <!-- Slide -->
+        <div class="row">
+            <div class="col col-offset-10 col-65">
+                <h2 id="description" style="padding:0">{{article.brand | uppercase}} </h2>
+                <h3 style="padding:0;">{{article.name}} -  
+                <span class="text-muted" style="line-height: 20px;font-size:19px"> {{article.price}}€</span> </h3>
+                <span style="line-height: 20px">EAN : {{article.EAN13 }} - Ref :{{article.seller }}</span>
+            </div>
+            <div class="col col-25">
+            <!-- Slide -->
                 <div>
 
                     <!-- main slider carousel -->
                     <div class="row">
-                        <div class="col-md-12" id="slider">
-
-                            <div class="col-md-12" id="carousel-bounding-box">
+                        <div class="col-100" id="slider">
+                            <div class="col-100" id="carousel-bounding-box">
                                 <div id="myCarousel" class="carousel slide">
                                     <!-- main slider carousel items -->
                                     <div class="carousel-inner" ng-init="itemactive=1">
-                                        <div class="item" ng-class="{'active':itemactive===$index}" data-slide-number="$index" ng-repeat="photo in photos | orderBy:'version':false">
+                                        <div class="item item-carousel " ng-class="{'active':itemactive===$index}" data-slide-number="$index" ng-repeat="photo in photos | orderBy:'version':false">
                                             <cl-image public-id="{{photo.public_id}}" class=" img-responsive" height="500" crop="fit" quality="80" format="jpg" />
                                         </div>
                                     </div>
                                 </div>
-                                <!-- main slider carousel nav controls -->
-                                <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
-                                <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
                             </div>
                         </div>
 
                     </div>
                     <!--/main slider carousel-->
 
-                    <!-- thumb navigation carousel -->
-                    <div class="col-md-12 hidden-sm hidden-xs" id="slider-thumbs">
-
-                        <!-- thumb navigation carousel items -->
-                        <ul class="list-inline text-center">
-                            <li ng-repeat="photo in photos | orderBy:'version':false">
-                                <a id="carousel-selector-{{$index}}" ng-click="itemactive=$index">
-                                    <cl-image public-id="{{photo.public_id}}" class="thumbnail" height="100" crop="fit" quality="80" format="jpg" />
-                                </a>
-                            </li>
-                        </ul>
-
-                    </div>
 
                 </div>
                 <!-- End Slide -->
+            </div>
+
+        </div>
+        <div class="row ">
+                    <div class="col-offset-10 col-80 ">
+                                    <div class="pull-right" style="padding-top:15px">
+                    <span class="icon ion-social-euro fagold"></span>
+                    <span class="icon ion-social-euro fagold"></span>
+                    <span class="icon ion-social-euro fagold"></span>
+                    <span class="icon ion-social-euro fagold"></span>
+                    <span class="icon ion-social-euro-outline fagold-outline"></span>
+                </div>
+                    <h4 style="font-variant: small-caps;"><u>Le profil</u></h4>
+                    <highchart id="chart1" config="chartPolar"></highchart>
+                </div>
+            </div>
+        <div class="row ">
+            <div class="col-100">
+
+                
 
                 <a ng-href="{{article.brandLink}}" target="_blank">
                     <div style="padding:5px;text-align:center;border:1px lightgrey solid">
@@ -69,18 +62,9 @@
 
 
             </div>
-            <div class="col-md-8 col-xs-12 col-sm-12">
 
-                <div>
-                    <h4 style="font-variant: small-caps;"><u>Le profil performance (PP)</u></h4>
-                    <highchart id="chart1" config="chartPolar"></highchart>
-                </div>
-
-
-
-            </div>
         </div>
-<div class="row responsive-sm">
+        <div class="row responsive-sm">
             <div class="col-md-4 col-xs-12 col-sm-12">
                             <h4 style="font-variant: small-caps;"><u>Le plus produit</u></h4>
                 <small>
@@ -89,17 +73,17 @@
                 <div style="margin-top:25px;margin-bottom:25px;text-align:center;">
                     <a href="#description"><i class="fa  fa-envelope"></i> Nous contacter au sujet de la qualité de cet article</a>
                 </div>
-</div>
-            <div class="col-md-8 col-xs-12 col-sm-12">
-                    <div id="clients">
-                    <h4 style="font-variant: small-caps;"><u>Question taille</u></h4>
-                    <highchart id="chart2" config="chartBar"></highchart>
-                </div>
-                <div style="margin-top:25px;margin-bottom:25px;text-align:center;">
-                    <a href="#description"><i class="fa  fa-comment-o"></i> J'ai essayé cet article et je souhaite partager mon avis</a>
-                </div>
-</div>
-</div>
+            </div>
+                        <div class="col-md-8 col-xs-12 col-sm-12">
+                                <div id="clients">
+                                <h4 style="font-variant: small-caps;"><u>Question taille</u></h4>
+                                <highchart id="chart2" config="chartBar"></highchart>
+                            </div>
+                            <div style="margin-top:25px;margin-bottom:25px;text-align:center;">
+                                <a href="#description"><i class="fa  fa-comment-o"></i> J'ai essayé cet article et je souhaite partager mon avis</a>
+                            </div>
+            </div>
+        </div>
         <div class="row">
             <div class=" col-md-12 col-xs-12 col-sm-12 text-center">
                 <div class="social-likes " style="margin-top:15px" data-counters="no">
@@ -116,4 +100,7 @@
             </div>
             </div>
   </ion-content>
+  <div class="bar bar-footer bar-stable">
+  <button class="button button-energized" style="width:100%" ng-click="scanBarcode()"> <span class="dark"><i class="icon ion-camera icon-lg"></i> Estimer votre rapport qualité prix</span></button>
+</div>
 </ion-view>

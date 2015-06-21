@@ -31,12 +31,6 @@ angular.module('starter', [
     });
 })
 
-.run(function($cordovaSplashscreen) {
-    setTimeout(function() {
-        $cordovaSplashscreen.hide()
-    }, 5000)
-})
-
 .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
 

@@ -53,8 +53,24 @@ angular.module('starter.controllers', [])
 })
 
 
-.controller('ConceptCtrl', function($scope, $rootScope, $http, ENV, $cordovaBarcodeScanner, $location) {
+.controller('ConceptCtrl', function($scope, $location) {
     $scope.pagenb = 1;
+
+    $scope.pageNext = function() {
+        $scope.pagenb += 1;
+        if ($scope.pagenb === 11) {
+            $scope.pagenb = 1;
+            $location.path('app/about');
+        }
+    }
+
+    $scope.pagePrevious = function() {
+        $scope.pagenb -= 1;
+        if ($scope.pagenb === 0) {
+            $scope.pagenb = 1;
+            $location.path('app/about');
+        }
+    }
 
 })
 

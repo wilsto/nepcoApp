@@ -1,8 +1,8 @@
 <ion-view >
 <div style="">
   <img src="images/leconcept.png" alt="" style="position: absolute;top:85px;right:0px">
-  <span style="position: absolute;top:130px;font-style:italic; color:#EF6F19;font-weight: bold;padding-left:10px">1 article, 5 tests en laboratoire</span>
-  <span style="position: absolute;top:155px;padding-left:10px">Exemple :</span>
+  <span  ng-if="pagenb===1" style="position: absolute;top:130px;font-style:italic; color:#EF6F19;font-weight: bold;padding-left:10px">1 article, 5 tests en laboratoire</span>
+  <span  ng-if="pagenb===1" style="position: absolute;top:155px;padding-left:10px">Exemple :</span>
 </div>
   <ion-content class="center">
     <div class="row" ng-if="pagenb===1">
@@ -39,14 +39,14 @@
       </div>
     </div>
     <div class="row" ng-if="pagenb>1">
-      <div class="col">
-           <img src="images/concept{{pagenb}}.png" alt="">
+      <div class="col" style="text-align:center">
+           <img src="images/concept{{pagenb}}.png" alt="" class="img-responsive">
       </div>
     </div>
   </ion-content>
     <div class="bar bar-footer bar-stable">
   <a  href="#/app/intro" class="button button-stable" style="width:33%"> <i class="icon ion-home icon-lg"></i> Accueil</a>
-  <a  href="#/app/about" class="button button-stable" style="width:33%"> <i class="icon ion-chevron-left icon-lg"></i> Retour </a>
-  <a class="button button-calm" style="width:33%" ng-click="pagenb=+1"> <i class="icon ion-chevron-right icon-lg"></i> Suivant</a>
+  <button class="button button-stable" style="width:33%" ng-click="pagePrevious()"> <i class="icon ion-chevron-left icon-lg"></i> Retour </button>
+  <button class="button button-calm" style="width:33%" ng-click="pageNext()"> <i class="icon ion-chevron-right icon-lg"></i> Suivant</button>
 </div>
 </ion-view>

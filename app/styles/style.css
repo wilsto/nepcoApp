@@ -151,3 +151,9 @@ img.logoCenter{
 .imgpartners{
 	width:150px;
 }
+
+.img-responsive{
+	padding-left:10px;
+	width: 100%;
+height: auto;
+}

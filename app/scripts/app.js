@@ -80,6 +80,15 @@ angular.module('starter', [
         }
     })
 
+    .state('app.partners', {
+        url: '/about/partners',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/partners.html'
+            }
+        }
+    })
+
     .state('app.moncompte', {
         url: '/moncompte',
         views: {

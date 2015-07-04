@@ -1,4 +1,7 @@
 <ion-side-menus enable-menu-with-back-views="false">
+<ion-header-bar style="height:80px;margin:0;padding:0" >
+<img src="images/header.png" alt="">
+</ion-header-bar>
   <ion-side-menu-content>
     <ion-nav-bar class="bar-stable">
       <ion-nav-back-button>
@@ -12,7 +15,7 @@
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
 
-  <ion-side-menu side="left">
+  <ion-side-menu side="left" style="top:40px">
     <ion-header-bar class="bar-stable">
       <h1 class="title">Menu</h1>
     </ion-header-bar>
@@ -21,20 +24,20 @@
         <ion-item menu-close href="#/app/intro">
           <i class="icon ion-home icon-lg"></i> Accueil
         </ion-item>
-        <ion-item menu-close ng-click="login()">
-          <i class="icon ion-lock-combination icon-lg"></i> Se connecter
-        </ion-item>
-        <ion-item menu-close href="#/app/playlists">
-         <i class="icon ion-android-cart icon-lg"></i> Mes articles
-        </ion-item>
-        <ion-item menu-close href="#/app/playlists">
-         <i class="icon ion-bag icon-lg"></i> Tous les articles
-        </ion-item>
         <ion-item menu-close href="#/app/browse">
-         <i class="icon ion-camera icon-lg"></i> Scanner
+         <i class="icon ion-camera icon-lg"></i> Flasher
+        </ion-item>
+        <ion-item menu-close ng-click="login()">
+          <i class="icon ion-lock-combination icon-lg"></i> Mon compte
+        </ion-item>
+        <ion-item menu-close href="#/app/playlists">
+         <i class="icon ion-tshirt-outline icon-lg"></i> Tous les articles
+        </ion-item>
+        <ion-item menu-close href="#/app/playlists">
+         <i class="icon ion-speakerphone icon-lg"></i> Actus
         </ion-item>
         <ion-item menu-close href="#/app/search">
-          <i class="icon ion-search icon-lg"></i> Rechercher
+          <i class="icon ion-erlenmeyer-flask icon-lg"></i> A propos
         </ion-item>
       </ion-list>
     </ion-content>

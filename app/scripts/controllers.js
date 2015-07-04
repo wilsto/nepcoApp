@@ -53,6 +53,11 @@ angular.module('starter.controllers', [])
 })
 
 
+.controller('ConceptCtrl', function($scope, $rootScope, $http, ENV, $cordovaBarcodeScanner, $location) {
+    $scope.pagenb = 1;
+
+})
+
 .controller('PlaylistsCtrl', function($scope, $rootScope, $http, ENV, $cordovaBarcodeScanner, $location) {
     $scope.doRefresh = function() {
         $http.get(ENV.apiEndpoint + 'api/articles')

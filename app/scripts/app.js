@@ -93,7 +93,17 @@ angular.module('starter', [
         url: '/about/concept',
         views: {
             'menuContent': {
-                templateUrl: 'templates/concept.html'
+                templateUrl: 'templates/concept.html',
+                controller: 'ConceptCtrl'
+            }
+        }
+    })
+
+    .state('app.contact', {
+        url: '/about/contact',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/contact.html'
             }
         }
     })

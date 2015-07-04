@@ -5,7 +5,7 @@
   <span style="position: absolute;top:155px;padding-left:10px">Exemple :</span>
 </div>
   <ion-content class="center">
-    <div class="row">
+    <div class="row" ng-if="pagenb===1">
       <div class="col">
 
       <a href="#/app/about" >
@@ -38,10 +38,15 @@
       </a>
       </div>
     </div>
+    <div class="row" ng-if="pagenb>1">
+      <div class="col">
+           <img src="images/concept{{pagenb}}.png" alt="">
+      </div>
+    </div>
   </ion-content>
     <div class="bar bar-footer bar-stable">
   <a  href="#/app/intro" class="button button-stable" style="width:33%"> <i class="icon ion-home icon-lg"></i> Accueil</a>
   <a  href="#/app/about" class="button button-stable" style="width:33%"> <i class="icon ion-chevron-left icon-lg"></i> Retour </a>
-  <a  href="#/app/about" class="button button-calm" style="width:33%"> <i class="icon ion-chevron-right icon-lg"></i> Suivant</a>
+  <a class="button button-calm" style="width:33%" ng-click="pagenb=+1"> <i class="icon ion-chevron-right icon-lg"></i> Suivant</a>
 </div>
 </ion-view>

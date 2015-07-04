@@ -24,3 +24,78 @@
 .item-carousel{
 	padding:0;
 }
+
+
+
+img.logoCenter{
+   width: 170px;
+   height: 170px;
+}
+
+.center {
+  -webkit-align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+  -webkit-flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  align-content: stretch;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.imgAround{
+	position: absolute;
+	width:85px;
+}
+
+.txtAround{
+	position: absolute;
+	font-size: 14px
+}
+
+.txtcenter{
+	position: absolute;
+	top: 60px;
+	left:50px;
+	font-size: 20px;
+	color:#EF6F19;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.txtcenter2{
+	position: absolute;
+	top: 100px;
+	left:50px;
+	color:#EF6F19;
+	font-size: 12px;
+}
+
+.imgtopleft{
+	top: -95px;
+	left:15px;
+}
+
+.txttopleft{
+	top: -10px;
+	left:10px;
+}
+
+.imgtopright{
+	top: -30px;
+	right:-85px;
+}
+
+.txttopright{
+	top: 55px;
+	right:-85px;
+}

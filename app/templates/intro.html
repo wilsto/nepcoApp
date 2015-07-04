@@ -1,40 +1,19 @@
 <ion-view view-title="Sommaire">
-  <ion-content>
-    <ion-refresher
-    pulling-text="Pull to refresh..."
-    on-refresh="doRefresh()">
-  </ion-refresher>
-<div class="list card">
+  <ion-content class="center">
+    <div class="row">
+      <div class="col">
+      <img src="images/logoCenter.png" alt="" class="logoCenter">
+      <span class="txtcenter">Flasher</span>
+      <span class="txtcenter2 ">un code barre</span>
+      <img src="images/articles.jpg" alt="" class="imgAround imgtopleft">
+      <span class="txttopleft txtAround">Tous les articles</span>
+      <img src="images/moncompte.png" alt="" class="imgAround imgtopright">
+      <span class="txttopright txtAround">Mon Compte</span>
 
-  <div class="item item-body">
-    <img class="full-image" src="images/barcode.jpg">
-    <p>
-      This is a "Facebook" styled Card. <br/>On peut y mettre n'importe quel texte d'accueil.
-    </p>
-  </div>
-
-  <div class="item tabs tabs-secondary tabs-icon-left">
-    <a class="tab-item" href="#">
-      <i class="icon ion-thumbsup"></i>
-      J'aime
-    </a>
-    <a class="tab-item" href="#">
-      <i class="icon ion-chatbox"></i>
-      Je commente
-    </a>
-    <a class="tab-item" href="#">
-      <i class="icon ion-share"></i>
-      Je partage
-    </a>
-  </div>
-
-</div>
-<div class="row row-center">
-  <div class="col col-50 col-offset-25">
-  <button class="button button-assertive" style="width:100%" ng-click="scanBarcode()"> <i class="icon ion-camera icon-lg"></i> Scanner un article</button>
-  </div>
-</div>
-
+      </div>
+    </div>
   </ion-content>
+  
+
 
 </ion-view>

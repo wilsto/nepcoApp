@@ -89,6 +89,16 @@ angular.module('starter', [
         }
     })
 
+
+    .state('app.follow', {
+        url: '/about/follow',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/follow.html'
+            }
+        }
+    })
+
     .state('app.moncompte', {
         url: '/moncompte',
         views: {

@@ -99,6 +99,16 @@ angular.module('starter', [
         }
     })
 
+    .state('app.tests', {
+        url: '/about/tests',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/tests.html',
+                controller: 'TestsCtrl'
+            }
+        }
+    })
+
     .state('app.contact', {
         url: '/about/contact',
         views: {

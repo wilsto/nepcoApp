@@ -152,6 +152,23 @@ img.logoCenter{
 	width:150px;
 }
 
+.imgtests{
+	height:105px;
+}
+
+.imgtestsLg{
+	height:150px;
+}
+.txttestsLg{
+	color:#6827B8;
+	font-weight: bold;
+	font-size: 18px;
+	display:block;
+}
+.txtdetails{
+	margin-top: 25px;
+}
+
 .img-responsive{
 	padding-left:10px;
 	width: 100%;

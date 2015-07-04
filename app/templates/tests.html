@@ -1,0 +1,139 @@
+<ion-view view-title="KippMe">
+    <img src="images/lestests.png" alt="" style="position: absolute;top:85px;right:20px">
+  <ion-content style="margin-top:90px;padding-left:25px">
+
+
+<div ng-if="pagedetails===''">
+    <div class="row" >
+      <div class="col col-45" style="text-align:center;">
+        <a ng-click="showDetails('abrasion')">
+          <img src="images/abrasion.png" alt="" class="imgtests">
+          <span>Abrasion</span>
+        </a>
+      </div>
+        <div class="col col-45" style="text-align:center;">
+        <a ng-click="showDetails('coutures')">
+          <img src="images/coutures.png" alt="" class="imgtests">
+          <span>Resistance <br/> des coutures</span>
+        </a>
+      </div>
+    </div>
+    <div class="row" >
+        <div class="col col-45" style="text-align:center;">
+        <a ng-click="showDetails('repassage')">
+          <img src="images/repassage.png" alt="" class="imgtests"><br/>
+          <span>Facilité <br/> de repassage</span>
+        </a>
+      </div>
+
+          <div class="col col-45" style="text-align:center;">
+        <a ng-click="showDetails('couleurs')">
+          <img src="images/couleurs.png" alt="" class="imgtests"><br/>
+          <span>Tenue des <br/>couleurs</span>
+        </a>
+      </div>
+    </div>
+    <div class="row" >
+          <div class="col col-45" style="text-align:center;">
+        <a ng-click="showDetails('vrillage')">
+          <img src="images/vrillage.png" alt="" class="imgtests">
+          <span>Vrillage <br/> des coutures</span>
+        </a>
+    </div>
+          <div class="col col-45" style="text-align:center;">
+      
+    </div>
+    </div>
+</div>
+
+<!--Abrasion -->
+<div ng-if="pagedetails==='abrasion'">
+    <div class="row" >
+   <div class="col col-100" style="text-align:center;">
+          <img src="images/abrasion.png" alt="" class="imgtestsLg">
+          <span class="txttestsLg">Abrasion</span>
+      </div>
+      </div>
+    <div class="txtdetails">
+      L’abrasion est évaluée en opérant un frottement du tissus par un autre tissus en mouvements circulaires et pendant une durée déterminée.<br/><br/>
+    Cela permet donc de déterminer la résistance d’un matériau au frottement et de qualifier sa rapidité d’usure.
+    </div>
+</div>
+
+
+<!--coutures -->
+<div ng-if="pagedetails==='coutures'">
+    <div class="row" >
+   <div class="col col-100" style="text-align:center;">
+          <img src="images/coutures.png" alt="" class="imgtestsLg">
+          <span class="txttestsLg">Resistance <br/> des coutures</span>
+      </div>
+      </div>
+    <div class="txtdetails">
+Ce test permet de mettre les coutures à l’épreuve et vous indique leur résistance. <br/><br/>
+En fonction de la note, vous saurez s’il faut manipuler l’article avec précaution ou si vous pouvez danser un rock sans avoir peur de vous retrouver avec des aérations inappropriées.<br/>
+
+    </div>
+</div>
+
+
+<!--repassage -->
+<div ng-if="pagedetails==='repassage'">
+    <div class="row" >
+   <div class="col col-100" style="text-align:center;">
+          <img src="images/repassage.png" alt="" class="imgtestsLg">
+          <span class="txttestsLg">Facilité <br/> de repassage</span>
+      </div>
+      </div>
+    <div class="txtdetails">
+Un critère de confort, non pas vestimentaire mais d’entretien !<br/>
+<br/>
+Des minutes de gagnées…
+
+    </div>
+</div>
+
+
+<!--couleurs -->
+<div ng-if="pagedetails==='couleurs'">
+    <div class="row" >
+   <div class="col col-100" style="text-align:center;">
+          <img src="images/couleurs.png" alt="" class="imgtestsLg">
+          <span class="txttestsLg">Tenue des <br/>couleurs</span>
+      </div>
+      </div>
+    <div class="txtdetails">
+Les couleurs peuvent se dénaturer à cause de différents paramètres. Les cahiers des charges KiPPMe en tiennent compte.<br/>
+Les couleurs peuvent être altérées par :<br/>
+- Le lavage<br/>
+- Les UV<br/>
+- L’eau chlorée<br/>
+- L’eau salée<br/>
+- Les frottements.<br/>
+
+    </div>
+</div>
+
+
+<!--vrillage -->
+<div ng-if="pagedetails==='vrillage'">
+    <div class="row" >
+   <div class="col col-100" style="text-align:center;">
+          <img src="images/vrillage.png" alt="" class="imgtestsLg">
+          <span class="txttestsLg">Vrillage <br/> des coutures</span>
+      </div>
+      </div>
+    <div class="txtdetails">
+Et oui, un test existe pour vous permettre de savoir si vous vêtements vont ressortir de la machine complètement tordus.
+
+    </div>
+</div>
+
+
+
+  </ion-content>
+  <div class="bar bar-footer bar-stable">
+  <div style="width:50%"></div>
+  <button class="button button-stable" style="width:50%" ng-click="retour()"> <i class="icon ion-chevron-left icon-lg"></i> Retour</button>
+</div>
+</ion-view>

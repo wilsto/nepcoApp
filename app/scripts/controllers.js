@@ -34,20 +34,20 @@ angular.module('starter.controllers', [])
     };
 })
 
-.controller('IntroCtrl', function($scope, $rootScope, $http, ENV, $cordovaBarcodeScanner, $location) {
+.controller('IntroCtrl', function($scope) {
 
 
 })
 
 
-.controller('AboutCtrl', function($scope, $rootScope, $http, ENV, $cordovaBarcodeScanner, $location) {
+.controller('AboutCtrl', function($scope) {
 
 
 })
 
 
 
-.controller('MoncompteCtrl', function($scope, $rootScope, $http, ENV, $cordovaBarcodeScanner, $location) {
+.controller('MoncompteCtrl', function($scope) {
 
 
 })
@@ -74,6 +74,23 @@ angular.module('starter.controllers', [])
 
 })
 
+
+.controller('TestsCtrl', function($scope, $location) {
+    $scope.pagedetails = '';
+
+    $scope.showDetails = function(details) {
+        $scope.pagedetails = details;
+    }
+    $scope.retour = function() {
+        if ($scope.pagedetails === '') {
+            $location.path('app/about');
+        } else {
+            $scope.pagedetails = '';
+        }
+    }
+
+})
+
 .controller('PlaylistsCtrl', function($scope, $rootScope, $http, ENV, $cordovaBarcodeScanner, $location) {
     $scope.doRefresh = function() {
         $http.get(ENV.apiEndpoint + 'api/articles')
@@ -90,9 +107,6 @@ angular.module('starter.controllers', [])
 
     $scope.scanBarcode = function() {
         $cordovaBarcodeScanner.scan().then(function(imageData) {
-            console.log(imageData.text);
-            console.log('Barcode Format -> ' + imageData.format);
-            console.log('Cancelled -> ' + imageData.cancelled);
             $location.path('app/playlists/' + imageData.text);
         }, function(error) {
             console.log('An error happened -> ' + error);

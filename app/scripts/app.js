@@ -69,15 +69,37 @@ angular.module('starter', [
             }
         }
     })
-        .state('app.playlists', {
-            url: '/playlists',
-            views: {
-                'menuContent': {
-                    templateUrl: 'templates/playlists.html',
-                    controller: 'PlaylistsCtrl'
-                }
+
+    .state('app.about', {
+        url: '/about',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/about.html',
+                controller: 'AboutCtrl'
             }
-        })
+        }
+    })
+
+    .state('app.moncompte', {
+        url: '/moncompte',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/moncompte.html',
+                controller: 'MoncompteCtrl'
+            }
+        }
+    })
+
+
+    .state('app.playlists', {
+        url: '/playlists',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/playlists.html',
+                controller: 'PlaylistsCtrl'
+            }
+        }
+    })
 
     .state('app.single', {
         url: '/playlists/:playlistId',

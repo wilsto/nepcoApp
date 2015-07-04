@@ -89,6 +89,14 @@ angular.module('starter', [
         }
     })
 
+    .state('app.concept', {
+        url: '/about/concept',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/concept.html'
+            }
+        }
+    })
 
     .state('app.follow', {
         url: '/about/follow',

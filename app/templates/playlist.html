@@ -3,15 +3,34 @@
 
         <div class="row">
             <div class="col col-offset-10 col-65">
-                <h2 id="description" style="padding:0">{{article.brand | uppercase}} </h2>
-                <h3 style="padding:0;">{{article.name}} -  
+                <h3 id="description" style="padding:0">{{article.brand | uppercase}} </h2>
+                <h4 style="padding:0;">{{article.name}} -  
                 <span class="text-muted" style="line-height: 20px;font-size:19px"> {{article.price}}€</span> </h3>
-                <span style="line-height: 20px">EAN : {{article.EAN13 }} - Ref :{{article.seller }}</span>
             </div>
             <div class="col col-25">
+            <div class="pull-right" style="text-align:center">
+                    <span class="icon ion-star fagold"></span>
+                    <span class="icon ion-star fagold"></span>
+                    <span class="icon ion-star fagold"></span>
+                    <span class="icon ion-star fagold"></span>
+                    <span class="icon ion-ios-star-outline fagold-outline"></span>
+                </div>
+            </div>
+        </div>
+                <div class="row" style="margin-top:-20px;">
+                            <div class="col col-offset-10 col-90" style="text-align:center">
+                                    <span style="font-size:12px">EAN: {{article.EAN13 }} - Ref:{{article.seller }}</span>
+                            </div>
+                </div>
+                                    <div class="row ">
+            <div class="col col-offset-10  col-90">            
+                    <highchart id="chart1" config="chartPolar"></highchart>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col col-offset-10  col-90">
             <!-- Slide -->
                 <div>
-
                     <!-- main slider carousel -->
                     <div class="row">
                         <div class="col-100" id="slider">
@@ -34,26 +53,11 @@
                 </div>
                 <!-- End Slide -->
             </div>
-
-        </div>
-        <div class="row ">
-                    <div class="col-offset-10 col-80 ">
-                                    <div class="pull-right" style="padding-top:15px">
-                    <span class="icon ion-social-euro fagold"></span>
-                    <span class="icon ion-social-euro fagold"></span>
-                    <span class="icon ion-social-euro fagold"></span>
-                    <span class="icon ion-social-euro fagold"></span>
-                    <span class="icon ion-social-euro-outline fagold-outline"></span>
-                </div>
-                    <h4 style="font-variant: small-caps;"><u>Le profil</u></h4>
-                    <highchart id="chart1" config="chartPolar"></highchart>
-                </div>
             </div>
+
+
         <div class="row ">
             <div class="col-offset-25 col-50">
-
-                
-
                 <a ng-href="{{article.brandLink}}" target="_blank">
                     <div style="padding:5px;text-align:center;border:1px lightgrey solid">
                         <span class="text-info">Voir le site de la marque</span>

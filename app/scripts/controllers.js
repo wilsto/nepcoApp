@@ -115,7 +115,7 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('BrowseCtrl', function($scope, $cordovaBarcodeScanner, $location) {
+.controller('BrowseCtrl', function($scope, $cordovaBarcodeScanner, $location, $timeout) {
     $scope.scanBarcode = function() {
         $cordovaBarcodeScanner.scan().then(function(imageData) {
             console.log(imageData.text);
@@ -126,6 +126,10 @@ angular.module('starter.controllers', [])
             console.log('An error happened -> ' + error);
         });
     };
+
+    $timeout(function() {
+        $scope.scanBarcode();
+    }, 3000);
 })
 
 .controller('PlaylistCtrl', function($scope, $http, ENV, $stateParams) {

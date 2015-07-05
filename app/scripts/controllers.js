@@ -1,7 +1,7 @@
 'use strict';
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $rootScope) {
     // Form data for the login modal
     $scope.loginData = {};
 
@@ -32,28 +32,39 @@ angular.module('starter.controllers', [])
             $scope.closeLogin();
         }, 1000);
     };
-})
 
-.controller('IntroCtrl', function($scope) {
+    $scope.imgTitle = 'title_intro';
 
+    $rootScope.$on('$stateChangeStart',
+        function(event, toState, toParams, fromState, fromParams, $state) {
+            console.log(toState);
+            $scope.imgTitle = 'title_' + toState.name.substr(4);
+            console.log($scope.imgTitle);
+            console.log("$state", $state);
 
-})
-
-
-.controller('AboutCtrl', function($scope) {
-
-
-})
-
-
-
-.controller('MoncompteCtrl', function($scope) {
-
+        });
 
 })
 
+.controller('IntroCtrl', function($scope, $rootScope) {})
 
-.controller('ConceptCtrl', function($scope, $location) {
+
+.controller('AboutCtrl', function($scope, $rootScope) {
+
+})
+
+
+
+.controller('MoncompteCtrl', function($scope, $rootScope) {
+
+})
+
+
+.controller('SuggestCtrl', function($scope, $rootScope) {
+
+})
+
+.controller('ConceptCtrl', function($scope, $location, $rootScope) {
     $scope.pagenb = 1;
 
     $scope.pageNext = function() {
@@ -129,7 +140,7 @@ angular.module('starter.controllers', [])
 
     $timeout(function() {
         $scope.scanBarcode();
-    }, 3000);
+    }, 2000);
 })
 
 .controller('PlaylistCtrl', function($scope, $http, ENV, $stateParams) {

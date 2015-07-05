@@ -80,6 +80,17 @@ angular.module('starter', [
         }
     })
 
+
+    .state('app.suggest', {
+        url: '/suggest',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/suggest.html',
+                controller: 'SuggestCtrl'
+            }
+        }
+    })
+
     .state('app.partners', {
         url: '/about/partners',
         views: {

@@ -75,8 +75,8 @@ angular.module('starter.controllers', [])
 })
 
 
-.controller('TestsCtrl', function($scope, $location) {
-    $scope.pagedetails = '';
+.controller('TestsCtrl', function($scope, $location, $stateParams) {
+    $scope.pagedetails = (typeof $stateParams.pagedetails === 'undefined') ? '' : $stateParams.pagedetails;
 
     $scope.showDetails = function(details) {
         $scope.pagedetails = details;

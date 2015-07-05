@@ -100,7 +100,7 @@ angular.module('starter', [
     })
 
     .state('app.tests', {
-        url: '/about/tests',
+        url: '/about/tests?pagedetails',
         views: {
             'menuContent': {
                 templateUrl: 'templates/tests.html',

@@ -127,7 +127,9 @@ angular.module('starter.controllers', [])
 })
 
 .controller('BrowseCtrl', function($scope, $cordovaBarcodeScanner, $location, $timeout) {
+    $scope.scanInProgress = false;
     $scope.scanBarcode = function() {
+        $scope.scanInProgress = true;
         $cordovaBarcodeScanner.scan().then(function(imageData) {
             console.log(imageData.text);
             console.log('Barcode Format -> ' + imageData.format);

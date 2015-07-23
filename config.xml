@@ -4,11 +4,12 @@
     <description>
         Flashez pour la qualité
     </description>
-    <author email="contact@kippme.com" href="http://www.kippme.com">
+    <author email="contactapp@kippme.fr" href="http://www.kippme.fr">
         KippMe Team
     </author>
     <content src="index.html" />
 <preference name="SplashScreen" value="screen" />
 <preference name="SplashScreenDelay" value="3000" />
     <access origin="*" />
+    <access origin="mailto:*" launch-external="yes" />
 </widget>

@@ -9,17 +9,18 @@
             </div>
             <div class="col col-25">
             <div class="pull-right" style="text-align:center">
-                    <span class="icon ion-star fagold"></span>
-                    <span class="icon ion-star fagold"></span>
-                    <span class="icon ion-star fagold"></span>
-                    <span class="icon ion-star fagold"></span>
-                    <span class="icon ion-ios-star-outline fagold-outline"></span>
+                                            <cl-image public-id="{{photos[0].public_id}}" class=" img-responsive" height="80" crop="fit" quality="80" format="jpg" />
                 </div>
             </div>
         </div>
                 <div class="row" style="margin-top:-20px;">
                             <div class="col col-offset-10 col-90" style="text-align:center">
-                                    <span style="font-size:12px">EAN: {{article.EAN13 }} - Ref:{{article.seller }}</span>
+                                    <span style="font-size:12px">EAN: {{article.EAN13 }} - Ref:{{article.seller }}</span><br/>
+                            <span class="icon ion-star fagold"></span>
+                    <span class="icon ion-star fagold"></span>
+                    <span class="icon ion-star fagold"></span>
+                    <span class="icon ion-star fagold"></span>
+                    <span class="icon ion-ios-star-outline fagold-outline"></span>
                             </div>
                 </div>
                                     <div class="row ">
@@ -27,40 +28,12 @@
                     <highchart id="chart1" config="chartPolar"></highchart>
             </div>
         </div>
-        <div class="row ">
-            <div class="col col-offset-10  col-90">
-            <!-- Slide -->
-                <div>
-                    <!-- main slider carousel -->
-                    <div class="row">
-                        <div class="col-100" id="slider">
-                            <div class="col-100" id="carousel-bounding-box">
-                                <div id="myCarousel" class="carousel slide">
-                                    <!-- main slider carousel items -->
-                                    <div class="carousel-inner" ng-init="itemactive=1">
-                                        <div class="item item-carousel " ng-class="{'active':itemactive===$index}" data-slide-number="$index" ng-repeat="photo in photos | orderBy:'version':false">
-                                            <cl-image public-id="{{photo.public_id}}" class=" img-responsive" height="500" crop="fit" quality="80" format="jpg" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!--/main slider carousel-->
-
-
-                </div>
-                <!-- End Slide -->
-            </div>
-            </div>
-
 
         <div class="row ">
             <div class="col-offset-25 col-50">
                 <a ng-href="{{article.brandLink}}" target="_blank">
                     <div style="padding:5px;text-align:center;border:1px lightgrey solid">
-                        <span class="text-info">Voir le site de la marque</span>
+                        <span class="text-info" style="color:#ff6700">Voir le site de la marque</span>
                     </div>
                 </a>
 

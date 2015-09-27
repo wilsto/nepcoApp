@@ -179,6 +179,7 @@ angular.module('starter.controllers', [])
                         type: 'area'
                     },
 
+                    colors: ['#ff6700'],
                     navigation: {
                         buttonOptions: {
                             enabled: false
@@ -186,12 +187,11 @@ angular.module('starter.controllers', [])
                     }
                 },
                 size: {
-                    height: 490
+                    height: 340
                 },
                 title: {
                     text: ''
                 },
-
                 xAxis: {
                     categories: ['Vrillage', 'Solidité des teintures au lavage', 'Solidité des teintures à la sueur', 'Solidité des teintures au jaunissement phénolique',
                         'Facilité de repassage'
@@ -237,8 +237,10 @@ angular.module('starter.controllers', [])
                     //This is the Main Highcharts chart config. Any Highchart options are valid here.
                     //will be overriden by values specified below.
                     chart: {
-                        type: 'bar'
+                        type: 'bar',
+
                     },
+                    colors: ['#ff6700'],
                     tooltip: {
                         style: {
                             padding: 10,

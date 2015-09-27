@@ -1,9 +1,9 @@
 <ion-view view-title="Article">
-  <ion-content style="top:80px">
+  <ion-content style="top:60px">
 
-        <div class="row">
-            <div class="col col-offset-10 col-65">
-                <h3 id="description" style="padding:0">{{article.brand | uppercase}} </h2>
+        <div class="row" style="margin-left:0px">
+            <div class="col col-75">
+                <h3 id="description" style="padding:0;font-size:20px;margin-bottom:0">{{article.brand | uppercase}} </h2>
                 <h4 style="padding:0;">{{article.name}} -  
                 <span class="text-muted" style="line-height: 20px;font-size:19px"> {{article.price}}€</span> </h3>
             </div>
@@ -13,18 +13,27 @@
                 </div>
             </div>
         </div>
+                <div class="row" style="margin-left:0px;margin-top:-20px;border-bottom:1px dashed lightgrey;">
+                    <div class="col col-100" style="text-align:left">
+                        <span style="font-size:12px">EAN: {{article.EAN13 }} </span><br/>
+                        <span style="font-size:12px">Ref:{{article.seller }}</span><br/>
+                    </div>
+                    </div>
+
                 <div class="row" style="margin-top:-20px;">
-                            <div class="col col-offset-10 col-90" style="text-align:center">
-                                    <span style="font-size:12px">EAN: {{article.EAN13 }} - Ref:{{article.seller }}</span><br/>
+                    <div class="col col-offset-10 col-90" style="text-align:right;margin-top:-30px">
+
                             <span class="icon ion-star fagold"></span>
                     <span class="icon ion-star fagold"></span>
                     <span class="icon ion-star fagold"></span>
                     <span class="icon ion-star fagold"></span>
                     <span class="icon ion-ios-star-outline fagold-outline"></span>
                             </div>
+                            </div>
                 </div>
-                                    <div class="row ">
-            <div class="col col-offset-10  col-90">            
+                                    <div class="row " style="margin-top:5px">
+            <div class="col col-100;">        
+                    <span style=" text-decoration: underline;padding-left:15px;font-variant: small-caps;">Le profil Performance : </span><br/>    
                     <highchart id="chart1" config="chartPolar"></highchart>
             </div>
         </div>

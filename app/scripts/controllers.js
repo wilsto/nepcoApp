@@ -172,6 +172,13 @@ angular.module('starter.controllers', [])
                 $('[id=carousel-selector-' + id + ']').addClass('selected');
             });
 
+            $scope.article.test1 = $scope.article.test1 || 'Vrillage';
+            $scope.article.test2 = $scope.article.test2 || 'Solidité des teintures au lavage';
+            $scope.article.test3 = $scope.article.test3 || 'Solidité des teintures à la sueur';
+            $scope.article.test4 = $scope.article.test4 || 'Solidité des teintures au jaunissement phénolique';
+            $scope.article.test5 = $scope.article.test5 || 'Facilité de repassage';
+
+
             $scope.chartPolar = {
                 options: {
                     chart: {
@@ -193,9 +200,7 @@ angular.module('starter.controllers', [])
                     text: ''
                 },
                 xAxis: {
-                    categories: ['Vrillage', 'Solidité des teintures au lavage', 'Solidité des teintures à la sueur', 'Solidité des teintures au jaunissement phénolique',
-                        'Facilité de repassage'
-                    ],
+                    categories: [$scope.article.test1, $scope.article.test2, $scope.article.test3, $scope.article.test4, $scope.article.test5],
                     tickmarkPlacement: 'on',
                     lineWidth: 1
                 },
